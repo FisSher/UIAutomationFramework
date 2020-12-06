@@ -11,11 +11,11 @@ public class BasePage {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-    static{
-        System.setProperty("webdriver.chrome.driver","\\drivers\\chromedriver.exe");
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10  );
-    }
+        static {
+            System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
+            driver = new ChromeDriver();
+            wait = new WebDriverWait(driver, 10);
+        }
 
     public static void closeBrowser(){driver.quit();}
     public static void navigateTo(String url){driver.get(url);}
@@ -25,5 +25,10 @@ public class BasePage {
     }
 
     public void clickElement(String locator)
-    {  Find(locator).click();  }
+    {  find(locator).click();  }
+
+    public void sendKeysTo(String locator , String keysToSend){
+        find(locator).clear();
+        find(locator).sendKeys(keysToSend);
+    }
 }

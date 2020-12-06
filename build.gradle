@@ -12,9 +12,11 @@ repositories {
 
 tasks.named('wrapper'){gradleVersion = '6.3'}
 
+
+
 dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
     testCompile group: 'io.cucumber', name: 'cucumber-java8', version: '4.2.0'
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
