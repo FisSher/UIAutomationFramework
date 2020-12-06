@@ -20,7 +20,7 @@ public class BasePage {
     public static void closeBrowser(){driver.quit();}
     public static void navigateTo(String url){driver.get(url);}
 
-    private WebElement Find(String locator){
+    private WebElement find(String locator){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
 
