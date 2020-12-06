@@ -7,14 +7,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class BasePage {
     public static WebDriver driver;
-    public static WebDriverWait wait;
+    private static WebDriverWait wait;
 
         static {
             System.setProperty("webdriver.chrome.driver", "\\drivers\\chromedriver.exe");
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, 10);
+        }
+
+        public BasePage(WebDriver driver){
+            BasePage.driver = driver;
+            wait = new WebDriverWait(driver,10);
         }
 
     public static void closeBrowser(){driver.quit();}
