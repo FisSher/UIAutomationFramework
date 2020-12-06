@@ -9,7 +9,7 @@ public class GoogleSearchPage extends BasePage{
     }
 
     public void navigateToGoogle(){
-        navigateTo("www.google.com");
+        navigateTo("https://www.google.com");
     }
 
     public void enterSearchCriteria(String searchText){ sendKeysTo(searchBox,searchText); }
