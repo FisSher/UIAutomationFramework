@@ -1,9 +1,10 @@
 package StepDefs;
+
 import Paginas.GoogleSearchPage;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 
 public class MyStepdefs {
@@ -26,6 +27,7 @@ public class MyStepdefs {
 
     @Then("links related to {string} appears on the results page")
     public void linksRelatedToAppearsOnTheResultsPage(String arg0) {
+        //No logic inside here yet
     }
 
 

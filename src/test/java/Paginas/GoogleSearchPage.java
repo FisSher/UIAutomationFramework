@@ -1,14 +1,14 @@
 package Paginas;
 
 public class GoogleSearchPage extends BasePage{
-        private String searchBox="//input[@type='text']";
-        private String searchButton="//div[@class='FPdoLc tfB0Bf']//center//input[@value='Buscar con Google']";
+        private static String searchBox="//input[@type='text']";
+        private static String searchButton="//body[@id='gsr']/div[@id='viewport']/div[@id='searchform']/form[@id='tsf']/div[@jsmodel='vWNDde']/div[@class='A8SBwf emcav']/div[@class='UUbT9']/div[@class='aajZCb']/div[@class='tfB0Bf']/center/input[1]";
 
     public GoogleSearchPage(){
-    super(driver);
+        super(driver);
     }
 
-    public void navigateToGoogle(){
+    public void navigateToGoogle() {
         navigateTo("https://www.google.com");
     }
 

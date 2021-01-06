@@ -2,10 +2,11 @@ package Paginas;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 
 public class BasePage {
@@ -31,10 +32,14 @@ public class BasePage {
     }
 
     public void clickElement(String locator)
-    {  find(locator).click();  }
+    {
+        find(locator).click();
+    }
 
     public void sendKeysTo(String locator , String keysToSend){
         find(locator).clear();
         find(locator).sendKeys(keysToSend);
     }
+
+
 }
